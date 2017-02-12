@@ -1,0 +1,34 @@
+{
+  "name": "easyfridge-api",
+  "version": "0.0.1",
+  "description": "Easyfridge API",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "find api -wholename '*/test/*.js' | xargs istanbul cover --dir reports/coverage _mocha -- --reporter mochawesome --reporter-options reportDir=reports/mochawesome; npm run show-reports;",
+    "show-reports": "firefox reports/coverage/lcov-report/index.html --new-tab --url  reports/mochawesome/mochawesome.html &",
+    "start-test": "find api -wholename '*/test/*.js' | xargs mocha -w"
+  },
+  "author": "Florian Eysseric",
+  "license": "ISC",
+  "private": true,
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.2",
+    "mochawesome": "^2.0.2",
+    "mongo-in-memory": "0.0.5",
+    "nodemon": "^1.11.0",
+    "sinon": "^1.17.7",
+    "sinon-as-promised": "^4.0.2",
+    "supertest": "^2.0.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.2.1",
+    "mongodb": "^2.2.11",
+    "uuid": "^3.0.1",
+    "winston": "^2.3.0"
+  }
+}
