@@ -82,7 +82,7 @@ const testuser = {
   email: 'bill@denbrough.it',
   firstName: 'Bill',
   lastName: 'Denbrough',
-  password: 'password',
+  password: 'p@ssw0rd',
   authorizations: []
 }
 const testadminuser = {
@@ -91,7 +91,7 @@ const testadminuser = {
   email: 'mike@hanlon.it',
   firstName: 'Mike',
   lastName: 'Hanlon',
-  password: 'password',
+  password: 'p@ssw0rd',
   authorizations: ['role_admin']
 }
 
