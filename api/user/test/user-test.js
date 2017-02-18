@@ -12,7 +12,7 @@ const {
   getAdminAuthenticationToken
 } = require('../../test/setup')
 
-const userKeys = ['id', 'email', 'name', 'authorizations']
+const userKeys = ['id', 'email', 'firstName', 'lastName', 'authorizations']
 
 describe('Endpoint /user', () => {
 
@@ -22,8 +22,9 @@ describe('Endpoint /user', () => {
       const newuser = {
         id: 'bmarsh',
         email: 'beverly@marsh.it',
-        name: 'Beverly Marsh',
-        password: 'bev'
+        firstName: 'Beverly',
+        lastName: 'Marsh',
+        password: 'b#vE9ly'
       }
       supertest(getApp())
         .post('/user')
@@ -35,7 +36,8 @@ describe('Endpoint /user', () => {
           expect(res.body).to.deep.equals({
             id: newuser.id,
             email: newuser.email,
-            name: newuser.name,
+            firstName: newuser.firstName,
+            lastName: newuser.lastName,
             authorizations: []
           })
         })
@@ -46,8 +48,9 @@ describe('Endpoint /user', () => {
       const newuser = {
         id: 'gdenbrough',
         email: testuser.email,
-        name: 'Georges Denbrough',
-        password: 'boat'
+        firstName: 'Georges',
+        lastName: 'Denbrough',
+        password: 'p@p3rBoat'
       }
       supertest(getApp())
         .post('/user')
@@ -57,8 +60,46 @@ describe('Endpoint /user', () => {
         .expect(409, done)
     })
 
-    it('should return 400 when given an incorrect payload', function(done) {
-      throw new Error('Not implemented')
+    it('should return 400 when not given a password', function(done) {
+      supertest(getApp())
+        .post('/user')
+        .set('Accept', 'application/json')
+        .send({
+          id: 'bmarsh',
+          email: 'beverly@marsh.it',
+          firstName: 'Beverly',
+          lastName: 'Marsh',
+        })
+        .expect('Content-Type', /json/)
+        .expect(400, done)
+    })
+    it('should return 400 when given an incorrect password', function(done) {
+      supertest(getApp())
+        .post('/user')
+        .set('Accept', 'application/json')
+        .send({
+          id: 'bmarsh',
+          email: 'beverly@marsh.it',
+          firstName: 'Beverly',
+          lastName: 'Marsh',
+          password: 'qwertyuiop'
+        })
+        .expect('Content-Type', /json/)
+        .expect(400, done)
+    })
+    it('should return 400 when given an incorrect email', function(done) {
+      supertest(getApp())
+        .post('/user')
+        .set('Accept', 'application/json')
+        .send({
+          id: 'bmarsh',
+          email: 'beverlymarsh.it',
+          firstName: 'Beverly',
+          lastName: 'Marsh',
+          password: 'qQ1!qqqq'
+        })
+        .expect('Content-Type', /json/)
+        .expect(400, done)
     })
 
   })
@@ -86,7 +127,8 @@ describe('Endpoint /user', () => {
         const user = JSON.parse(JSON.stringify(testuser))
         const expectedUser = {
           id: user.id,
-          name: user.name,
+          firstName: user.firstName,
+          lastName: user.lastName,
           email: user.email,
           authorizations: user.authorizations
         }
@@ -109,7 +151,8 @@ describe('Endpoint /user', () => {
         const user = JSON.parse(JSON.stringify(testuser))
         const expectedUser = {
           id: user.id,
-          name: user.name,
+          firstName: user.firstName,
+          lastName: user.lastName,
           email: user.email,
           authorizations: user.authorizations
         }
@@ -160,7 +203,8 @@ describe('Endpoint /user', () => {
           _id: 1,
           id: 'ekaspbrak',
           email: 'eddie@kaspbrak.it',
-          name: 'Eddie Kaspbrak',
+          firstName: 'Eddie',
+          lastName: 'Kaspbrak',
           password: 'hydrox'
         }
         supertest(getApp())

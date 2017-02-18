@@ -1,3 +1,12 @@
+class BAD_REQUEST_ERROR extends Error {
+  constructor (message = 'Bad request') {
+    super()
+    this.name = 'BAD_REQUEST_ERROR'
+    this.message = message
+    this.httpStatus = 400
+    Error.captureStackTrace( this, this.constructor )
+  }
+}
 class AUTHENTICATION_ERROR extends Error {
   constructor (message = 'Wrong authentication') {
     super()
@@ -46,6 +55,7 @@ class UNKNOWN_ERROR extends Error {
 }
 
 module.exports = {
+  BAD_REQUEST_ERROR,
   AUTHENTICATION_ERROR,
   FORBIDDEN_ERROR,
   NOT_FOUND_ERROR,

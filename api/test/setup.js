@@ -64,7 +64,7 @@ afterEach(function() {
 
 after(function(done) {
   try {
-    server.close()
+    if (server) server.close()
   } catch (e) {
     logger.error(e)
   }
@@ -80,7 +80,8 @@ const testuser = {
   _id: 42,
   id: 'bdenbrough',
   email: 'bill@denbrough.it',
-  name: 'Bill Denbrough',
+  firstName: 'Bill',
+  lastName: 'Denbrough',
   password: 'password',
   authorizations: []
 }
@@ -88,7 +89,8 @@ const testadminuser = {
   _id: 73,
   id: 'mhanlon',
   email: 'mike@hanlon.it',
-  name: 'Mike Hanlon',
+  firstName: 'Mike',
+  lastName: 'Hanlon',
   password: 'password',
   authorizations: ['role_admin']
 }

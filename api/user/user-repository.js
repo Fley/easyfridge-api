@@ -5,7 +5,8 @@ const serializer = user => {
     user.toJSON = function() {
       return {
         id: this.id,
-        name: this.name,
+        firstName: this.firstName,
+        lastName: this.lastName,
         email: this.email,
         authorizations: this.authorizations || []
       }
@@ -27,9 +28,9 @@ const findUserByEmail = datasource => email => {
 }
 
 const createUser = datasource => user => {
-  const {id, email, name, password} = user
+  const {id, email, firstName, lastName, password} = user
   const users = datasource.collection(USERS)
-  return users.insertOne({id, email, name, password})
+  return users.insertOne({id, email, firstName, lastName, password})
 }
 
 module.exports = ({datasource}) => {
