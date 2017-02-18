@@ -1,7 +1,9 @@
 const {USERS} = require('../../database').COLLECTIONS
 
 const serializer = user => {
-  if (user) {
+  if (Array.isArray(user)) {
+    return user.map(u => serializer(u))
+  } else if (user) {
     user.toJSON = function() {
       return {
         id: this.id,
@@ -15,15 +17,22 @@ const serializer = user => {
   return user
 }
 
+const findAll = datasource => (filters) => {
+  const collection = datasource.collection(USERS)
+  const users = collection.find(filters).toArray()
+  console.log(users)
+  return users.then(serializer)
+}
+
 const findUserById = datasource => id => {
-  const users = datasource.collection(USERS)
-  const user = users.findOne({id})
+  const collection = datasource.collection(USERS)
+  const user = collection.findOne({id})
   return user.then(serializer)
 }
 
 const findUserByEmail = datasource => email => {
-  const users = datasource.collection(USERS)
-  const user = users.findOne({email})
+  const collection = datasource.collection(USERS)
+  const user = collection.findOne({email})
   return user.then(serializer)
 }
 
@@ -35,6 +44,7 @@ const createUser = datasource => user => {
 
 module.exports = ({datasource}) => {
   return {
+    findAll: findAll(datasource),
     findUserById: findUserById(datasource),
     findUserByEmail: findUserByEmail(datasource),
     createUser: createUser(datasource)

@@ -8,6 +8,10 @@ const getUserByEmail = repository => email => {
   return repository.findUserByEmail(email)
 }
 
+const getAllUsers = repository => () => {
+  return repository.findAll()
+}
+
 const createUser = repository => newUser => {
   return getUserByEmail(repository)(newUser.email).then(user => {
     if (!user) {
@@ -29,7 +33,8 @@ const service = ({repository}) => {
   return {
     getUser: getUser(repository),
     getUserByEmail: getUserByEmail(repository),
-    createUser: createUser(repository)
+    createUser: createUser(repository),
+    getAllUsers: getAllUsers(repository)
   }
 }
 

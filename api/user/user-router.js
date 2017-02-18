@@ -25,8 +25,17 @@ const router = ({service, authenticationService}) => {
         }).catch(next)
       }
     )
-    .get(
-      '/:id',
+    .get('/',
+      isAuthenticated,
+      isAuthorized((req, authUser) => authUser.hasAuthorizations('role_admin')),
+      (req, res, next) => {
+        service.getAllUsers().then(body => {
+          res.setBody(body)
+          next()
+        }).catch(next)
+      }
+    )
+    .get('/:id',
       isAuthenticated,
       isAuthorized((req, authUser) =>
           authUser.hasAuthorizations('role_admin') || req.params.id === authUser.id),

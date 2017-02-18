@@ -107,15 +107,45 @@ describe('Endpoint /user', () => {
   describe('GET /user', () => {
 
     it('should return 200 and the requested page of users when authenticated as administrateur', function(done) {
-      throw new Error('Not implemented')
+      getAdminAuthenticationToken().then(token => {
+        supertest(getApp())
+          .get('/user')
+          .set('Accept', 'application/json')
+          .set('x-auth-token', token)
+          .expect('Content-Type', /json/)
+          .expect(res => {
+            expect(res).to.have.authenticationToken
+            expect(res.body).to.be.an('array')
+            res.body.forEach(e => expect(e).to.have.all.keys(userKeys))
+          })
+          .expect(200, done)
+      }).catch(err => console.log(err))
     })
 
     it('should return 403 when NOT authenticated as administrateur', function(done) {
-      throw new Error('Not implemented')
+      getAuthenticationToken().then(token => {
+        supertest(getApp())
+          .get('/user')
+          .set('Accept', 'application/json')
+          .set('x-auth-token', token)
+          .expect('Content-Type', /json/)
+          .expect(res => {
+            expect(res).to.not.have.authenticationToken
+          })
+          .expect(403, done)
+      }).catch(err => console.log(err))
     })
 
     it('should return 401 when NOT authenticated', function(done) {
-      throw new Error('Not implemented')
+      supertest(getApp())
+        .get('/user')
+        .set('Accept', 'application/json')
+        .set('x-auth-token', 'xxx.yyy.zzz')
+        .expect('Content-Type', /json/)
+        .expect(res => {
+          expect(res).to.not.have.authenticationToken
+        })
+        .expect(401, done)
     })
 
   })
