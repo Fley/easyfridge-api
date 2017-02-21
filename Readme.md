@@ -1,5 +1,6 @@
 # Easyfridge API
 [![Build Status](https://travis-ci.org/Fley/easyfridge-api.svg?branch=master)](https://travis-ci.org/Fley/easyfridge-api)
+[![Coverage Status](https://coveralls.io/repos/github/Fley/easyfridge-api/badge.svg?branch=master)](https://coveralls.io/github/Fley/easyfridge-api?branch=master)
 
 ## Endpoints
 
