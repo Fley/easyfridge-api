@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "mkdir logs;nodemon",
-    "test": "mkdir logs;find api -wholename '*/test/*.js' | xargs istanbul cover --dir reports/coverage _mocha -- --reporter mochawesome --reporter-options reportDir=reports/mochawesome && cat reports/coverage/lcov.info | coveralls; sonar-scanner;",
+    "test-coverage": "mkdir logs;find api -wholename '*/test/*.js' | xargs istanbul cover --dir reports/coverage _mocha -- --reporter mochawesome --reporter-options reportDir=reports/mochawesome",
+    "test": "npm run test-coverage && cat reports/coverage/lcov.info | coveralls; sonar-scanner;",
     "show-reports": "firefox reports/coverage/lcov-report/index.html --new-tab --url  reports/mochawesome/mochawesome.html --new-tab --url https://sonarqube.com/dashboard/index?id=fley%3Aeasyfridge-api &",
     "start-test": "mkdir logs;find api -wholename '*/test/*.js' | xargs mocha -w"
   },
