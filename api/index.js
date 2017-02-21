@@ -4,8 +4,6 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const { logRequest, sendJson, handleErrors, logResponse } = require('./middlewares');
 
-// TODO: http://xseignard.github.io/2013/04/25/quality-analysis-on-node.js-projects-with-mocha-istanbul-and-sonar/
-
 const createServicesFactory = require('./services-factory')
 const createRoutersFactory = require('./routers-factory')
 
@@ -24,6 +22,12 @@ const createApi = ({datasource}) => {
     res.setBody = body => res.body = body
     res.statusCode = undefined
     next()
+  })
+
+  app.get('/', (req, res) => {
+    res.status(200).json({
+      api: 'easyfridge-api'
+    })
   })
 
   app.use('/user', routersFactory.getUserRouter())

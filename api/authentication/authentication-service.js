@@ -2,6 +2,14 @@ const logger = require('../../logger')
 const ERRORS = require('../errors')
 const jwt = require('jsonwebtoken')
 
+const createTokenFromUser = config => user => jwt.sign({
+    email: user.email
+  }, config.privateKey, {
+    algorithm: config.algorithm,
+    expiresIn: config.validDuration,
+    issuer: config.issuer
+  })
+
 const createToken = ({userService, config}) => ({email, password}) => {
   return userService.getUserByEmail(email).then(user => {
     if (user && user.email === email && user.password === password) {
@@ -12,13 +20,18 @@ const createToken = ({userService, config}) => ({email, password}) => {
   })
 }
 
-const createTokenFromUser = config => user => jwt.sign({
-    email: user.email
-  }, config.privateKey, {
-    algorithm: config.algorithm,
-    expiresIn: config.validDuration,
-    issuer: config.issuer
-  })
+const verifyToken = config => token => {
+  try {
+    return jwt.verify(token, config.privateKey, {
+      algorithm: config.algorithm,
+      issuer: config.issuer
+    })
+  } catch(err) {
+    logger.warn('Invalid token"' + token + '".')
+    logger.debug(err)
+    return null
+  }
+}
 
 const isAuthenticated = ({userService, config}) => (req, res, next) => {
   const token = req.get('x-auth-token')
@@ -45,18 +58,8 @@ const isAuthenticated = ({userService, config}) => (req, res, next) => {
   }
 }
 
-const verifyToken = config => token => {
-  try {
-    return jwt.verify(token, config.privateKey, {
-      algorithm: config.algorithm,
-      issuer: config.issuer
-    })
-  } catch(err) {
-    logger.warn('Invalid token"' + token + '".')
-    logger.debug(err)
-    return null
-  }
-}
+const getAuthenticatedUser = req =>
+  req && req.authenticationData ? req.authenticationData.authenticatedUser : null
 
 const isAuthorized = (checkAuthorizations) => (req, res, next) => {
   const authUser = getAuthenticatedUser(req)
@@ -78,15 +81,12 @@ const renewToken = config => (req, res, next) => {
   next()
 }
 
-const getAuthenticatedUser = req =>
-  req && req.authenticationData ? req.authenticationData.authenticatedUser : null
-
 const service = ({userService, config}) => {
   return {
     createToken: createToken({userService, config}),
     isAuthenticated: isAuthenticated({userService, config}),
-    isAuthorized,
     renewToken: renewToken(config),
+    isAuthorized,
     getAuthenticatedUser
   }
 }

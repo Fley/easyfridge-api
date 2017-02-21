@@ -5,7 +5,7 @@ const { createDatasource } = require('./database')
 const { createApi, startApi } = require('./api')
 
 createDatasource().then((datasource) => {
-  app = createApi({datasource})
+  const app = createApi({datasource})
   startApi(app)
 }).catch((err) => {
   logger.error('Error creating data source !', err)

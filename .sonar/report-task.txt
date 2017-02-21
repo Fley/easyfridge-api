@@ -1,0 +1,5 @@
+projectKey=fley:easyfridge-api
+serverUrl=https://sonarqube.com
+dashboardUrl=https://sonarqube.com/dashboard/index/fley:easyfridge-api
+ceTaskId=AVpiRGAJykBoHULOHX-6
+ceTaskUrl=https://sonarqube.com/api/ce/task?id=AVpiRGAJykBoHULOHX-6

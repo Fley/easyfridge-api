@@ -18,11 +18,6 @@ const logRequest = (req, res, next) => {
   next()
 }
 
-const handleErrors = (err, req, res, next) => {
-  sendError(err, res)
-  next()
-}
-
 const sendError = (err, res) => {
   logger.error(err)
   const message = (err && err.message) || ERRORS.UNKNOWN_ERROR_MESSAGE
@@ -30,12 +25,16 @@ const sendError = (err, res) => {
   res.status(status).setBody({ error: message })
 }
 
+const handleErrors = (err, req, res, next) => {
+  sendError(err, res)
+  next()
+}
+
 const sendJson = (req, res, next) => {
   if(!res.statusCode) {
     if(res.body) {
       res.status(req.method==='POST' ? 201 : 200)
     } else {
-      // TODO: REMOVE THIS LINE and check it in a separate middleware BEFORE setting authtoken !!
       sendError(new ERRORS.UNKNOWN_ERROR(), res)
     }
   }
@@ -55,6 +54,7 @@ const logResponse = (req, res, next) => {
     id: req.id,
     body: JSON.parse(JSON.stringify(res.body, replacer, spaces))
   })
+  next()
 }
 
 module.exports = {

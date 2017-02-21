@@ -1,9 +1,7 @@
 const ERRORS = require('../errors')
 const Joi = require('joi')
 
-const validateBody = (schema) => (req, res, next) => validate(req.body, schema, next)
-
-const validate = (object, schema, next) => Joi.validate(object, schema, (err, value) => {
+const validate = (object, schema, next) => Joi.validate(object, schema, (err) => {
   if (err) {
     throw new ERRORS.BAD_REQUEST_ERROR(err.details.reduce(
       (msg, detail, i) => (i > 0 ? ',' : '') + msg + detail.message, '')
@@ -11,6 +9,8 @@ const validate = (object, schema, next) => Joi.validate(object, schema, (err, va
   }
   next && next()
 })
+
+const validateBody = (schema) => (req, res, next) => validate(req.body, schema, next)
 
 module.exports = {
   validateBody,

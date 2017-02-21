@@ -19,7 +19,7 @@ const createUser = repository => newUser => {
     }
     throw new ERRORS.CONFLICT_ERROR('Given user email already exists')
   })
-  .then(r => getUserByEmail(repository)(newUser.email))
+  .then(() => getUserByEmail(repository)(newUser.email))
   .then(user => {
     if(!user) {
       throw new ERRORS.UNKNOWN_ERROR()
