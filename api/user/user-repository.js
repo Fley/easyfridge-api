@@ -20,7 +20,6 @@ const serializer = user => {
 const findAll = datasource => (filters) => {
   const collection = datasource.collection(USERS)
   const users = collection.find(filters).toArray()
-  console.log(users)
   return users.then(serializer)
 }
 
