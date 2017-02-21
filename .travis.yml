@@ -4,5 +4,3 @@ node_js:
   - "node"
 addons:
   sonarqube:
-script:
-  - sonar-scanner
