@@ -1,0 +1,1214 @@
+2017-02-21T20:41:30.995Z - [32minfo[39m: Easyfridge api listening on port 3000!
+2017-02-21T20:41:31.028Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:31.143Z - [32minfo[39m: >>> Request 
+{ id: [32m'f6eb99a9-149a-4458-bde4-6664c259f74e'[39m,
+  method: [32m'POST'[39m,
+  path: [32m'/authentication'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:33618'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     [32m'content-type'[39m: [32m'application/json'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'content-length'[39m: [32m'51'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.150Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'f6eb99a9-149a-4458-bde4-6664c259f74e'[39m,
+  body: { email: [32m'bill@denbrough.it'[39m, password: [32m'p@ssw0rd'[39m } }
+2017-02-21T20:41:31.203Z - [36mverbose[39m: Renewing token for current user
+2017-02-21T20:41:31.212Z - [32minfo[39m: <<< Response 
+{ id: [32m'f6eb99a9-149a-4458-bde4-6664c259f74e'[39m,
+  status: [33m201[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.EstUGkBQ5o2e6uojvTnXENJchJgX3u8z-boHnxlzxfc'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'208'[39m,
+     etag: [32m'W/"d0-7+0dVAqVg0sAvHsFw0jVTw"'[39m } }
+2017-02-21T20:41:31.214Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'f6eb99a9-149a-4458-bde4-6664c259f74e'[39m,
+  body: { token: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.EstUGkBQ5o2e6uojvTnXENJchJgX3u8z-boHnxlzxfc'[39m } }
+2017-02-21T20:41:31.239Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:31.268Z - [32minfo[39m: >>> Request 
+{ id: [32m'ea785b1d-1ac8-478b-8bdf-ad5220b292aa'[39m,
+  method: [32m'POST'[39m,
+  path: [32m'/authentication'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:45939'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     [32m'content-type'[39m: [32m'application/json'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'content-length'[39m: [32m'54'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.270Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'ea785b1d-1ac8-478b-8bdf-ad5220b292aa'[39m,
+  body: { email: [32m'georges@denbrough.it'[39m, password: [32m'password'[39m } }
+2017-02-21T20:41:31.285Z - [31merror[39m:  BAD_REQUEST_ERROR: "password" with value "password" fails to match the password pattern
+    at Joi.validate.err (/home/florian/workspace/easyfridge-api/api/middlewares/validation.js:9:421)
+    at Object._validateWithOptions (/home/florian/workspace/easyfridge-api/node_modules/joi/lib/any.js:610:20)
+    at Object.root.validate (/home/florian/workspace/easyfridge-api/node_modules/joi/lib/index.js:121:23)
+    at validate (/home/florian/workspace/easyfridge-api/api/middlewares/validation.js:9:261)
+    at /home/florian/workspace/easyfridge-api/api/middlewares/validation.js:9:1019
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:176:3)
+    at router (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at app.use (/home/florian/workspace/easyfridge-api/api/index.js:9:1606)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at logRequest (/home/florian/workspace/easyfridge-api/api/middlewares.js:9:622)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at /home/florian/workspace/easyfridge-api/node_modules/body-parser/lib/read.js:129:5
+    at invokeCallback (/home/florian/workspace/easyfridge-api/node_modules/raw-body/index.js:262:16)
+    at done (/home/florian/workspace/easyfridge-api/node_modules/raw-body/index.js:251:7)
+    at IncomingMessage.onEnd (/home/florian/workspace/easyfridge-api/node_modules/raw-body/index.js:307:7)
+    at emitNone (events.js:86:13)
+    at IncomingMessage.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+2017-02-21T20:41:31.290Z - [32minfo[39m: <<< Response 
+{ id: [32m'ea785b1d-1ac8-478b-8bdf-ad5220b292aa'[39m,
+  status: [33m400[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'84'[39m,
+     etag: [32m'W/"54-MKDtkRgBWXZTd1ZVonL5JA"'[39m } }
+2017-02-21T20:41:31.292Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'ea785b1d-1ac8-478b-8bdf-ad5220b292aa'[39m,
+  body: { error: [32m'"password" with value "password" fails to match the password pattern'[39m } }
+2017-02-21T20:41:31.302Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:31.312Z - [32minfo[39m: >>> Request 
+{ id: [32m'5d798062-8794-4dd2-b29f-d75eb212b822'[39m,
+  method: [32m'POST'[39m,
+  path: [32m'/authentication'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:43457'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     [32m'content-type'[39m: [32m'application/json'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'content-length'[39m: [32m'72'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.313Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'5d798062-8794-4dd2-b29f-d75eb212b822'[39m,
+  body: 
+   { email: [32m'bill@denbrough.it'[39m,
+     password: [32m'clearly an incorrect password'[39m } }
+2017-02-21T20:41:31.317Z - [31merror[39m:  BAD_REQUEST_ERROR: "password" with value "clearly an incorrect password" fails to match the password pattern
+    at Joi.validate.err (/home/florian/workspace/easyfridge-api/api/middlewares/validation.js:9:421)
+    at Object._validateWithOptions (/home/florian/workspace/easyfridge-api/node_modules/joi/lib/any.js:610:20)
+    at Object.root.validate (/home/florian/workspace/easyfridge-api/node_modules/joi/lib/index.js:121:23)
+    at validate (/home/florian/workspace/easyfridge-api/api/middlewares/validation.js:9:261)
+    at /home/florian/workspace/easyfridge-api/api/middlewares/validation.js:9:1019
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:176:3)
+    at router (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at app.use (/home/florian/workspace/easyfridge-api/api/index.js:9:1606)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at logRequest (/home/florian/workspace/easyfridge-api/api/middlewares.js:9:622)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at /home/florian/workspace/easyfridge-api/node_modules/body-parser/lib/read.js:129:5
+    at invokeCallback (/home/florian/workspace/easyfridge-api/node_modules/raw-body/index.js:262:16)
+    at done (/home/florian/workspace/easyfridge-api/node_modules/raw-body/index.js:251:7)
+    at IncomingMessage.onEnd (/home/florian/workspace/easyfridge-api/node_modules/raw-body/index.js:307:7)
+    at emitNone (events.js:86:13)
+    at IncomingMessage.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+2017-02-21T20:41:31.318Z - [32minfo[39m: <<< Response 
+{ id: [32m'5d798062-8794-4dd2-b29f-d75eb212b822'[39m,
+  status: [33m400[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'105'[39m,
+     etag: [32m'W/"69-WMPLwr7e3sax4kX/u1C1HQ"'[39m } }
+2017-02-21T20:41:31.319Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'5d798062-8794-4dd2-b29f-d75eb212b822'[39m,
+  body: { error: [32m'"password" with value "clearly an incorrect password" fails to match the password pattern'[39m } }
+2017-02-21T20:41:31.332Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:31.341Z - [32minfo[39m: >>> Request 
+{ id: [32m'08c23223-e437-45be-b95b-5f782efbdbe1'[39m,
+  method: [32m'POST'[39m,
+  path: [32m'/user'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:33762'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'content-type'[39m: [32m'application/json'[39m,
+     [32m'content-length'[39m: [32m'104'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.343Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'08c23223-e437-45be-b95b-5f782efbdbe1'[39m,
+  body: 
+   { id: [32m'bmarsh'[39m,
+     email: [32m'beverly@marsh.it'[39m,
+     firstName: [32m'Beverly'[39m,
+     lastName: [32m'Marsh'[39m,
+     password: [32m'b#vE9ly'[39m } }
+2017-02-21T20:41:31.377Z - [36mverbose[39m: Renewing token for current user
+2017-02-21T20:41:31.378Z - [32minfo[39m: <<< Response 
+{ id: [32m'08c23223-e437-45be-b95b-5f782efbdbe1'[39m,
+  status: [33m201[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'103'[39m,
+     etag: [32m'W/"67-7E6eEpsWE8f6QOkxZA7wJg"'[39m } }
+2017-02-21T20:41:31.379Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'08c23223-e437-45be-b95b-5f782efbdbe1'[39m,
+  body: 
+   { id: [32m'bmarsh'[39m,
+     firstName: [32m'Beverly'[39m,
+     lastName: [32m'Marsh'[39m,
+     email: [32m'beverly@marsh.it'[39m,
+     authorizations: [] } }
+2017-02-21T20:41:31.386Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:31.393Z - [32minfo[39m: >>> Request 
+{ id: [32m'8fbb3fd4-5426-49ca-a982-332face087f1'[39m,
+  method: [32m'POST'[39m,
+  path: [32m'/user'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:37832'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'content-type'[39m: [32m'application/json'[39m,
+     [32m'content-length'[39m: [32m'115'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.395Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'8fbb3fd4-5426-49ca-a982-332face087f1'[39m,
+  body: 
+   { id: [32m'gdenbrough'[39m,
+     email: [32m'bill@denbrough.it'[39m,
+     firstName: [32m'Georges'[39m,
+     lastName: [32m'Denbrough'[39m,
+     password: [32m'p@p3rBoat'[39m } }
+2017-02-21T20:41:31.400Z - [31merror[39m:  CONFLICT_ERROR: Given user email already exists
+    at getUserByEmail.then.user (/home/florian/workspace/easyfridge-api/api/user/user-service.js:9:1147)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-02-21T20:41:31.401Z - [32minfo[39m: <<< Response 
+{ id: [32m'8fbb3fd4-5426-49ca-a982-332face087f1'[39m,
+  status: [33m409[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'43'[39m,
+     etag: [32m'W/"2b-lfNa/w+IDpE1a2Dap8+HdQ"'[39m } }
+2017-02-21T20:41:31.402Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'8fbb3fd4-5426-49ca-a982-332face087f1'[39m,
+  body: { error: [32m'Given user email already exists'[39m } }
+2017-02-21T20:41:31.410Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:31.419Z - [32minfo[39m: >>> Request 
+{ id: [32m'a5f695c6-0f5a-4cba-a197-865e53897dd9'[39m,
+  method: [32m'POST'[39m,
+  path: [32m'/user'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:40692'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'content-type'[39m: [32m'application/json'[39m,
+     [32m'content-length'[39m: [32m'83'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.420Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'a5f695c6-0f5a-4cba-a197-865e53897dd9'[39m,
+  body: 
+   { id: [32m'bmarsh'[39m,
+     email: [32m'beverly@marsh.it'[39m,
+     firstName: [32m'Beverly'[39m,
+     lastName: [32m'Marsh'[39m } }
+2017-02-21T20:41:31.424Z - [31merror[39m:  BAD_REQUEST_ERROR: "password" is required
+    at Joi.validate.err (/home/florian/workspace/easyfridge-api/api/middlewares/validation.js:9:421)
+    at Object._validateWithOptions (/home/florian/workspace/easyfridge-api/node_modules/joi/lib/any.js:610:20)
+    at Object.root.validate (/home/florian/workspace/easyfridge-api/node_modules/joi/lib/index.js:121:23)
+    at validate (/home/florian/workspace/easyfridge-api/api/middlewares/validation.js:9:261)
+    at /home/florian/workspace/easyfridge-api/api/middlewares/validation.js:9:1019
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:176:3)
+    at router (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at app.use (/home/florian/workspace/easyfridge-api/api/index.js:9:1606)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at logRequest (/home/florian/workspace/easyfridge-api/api/middlewares.js:9:622)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at /home/florian/workspace/easyfridge-api/node_modules/body-parser/lib/read.js:129:5
+    at invokeCallback (/home/florian/workspace/easyfridge-api/node_modules/raw-body/index.js:262:16)
+    at done (/home/florian/workspace/easyfridge-api/node_modules/raw-body/index.js:251:7)
+    at IncomingMessage.onEnd (/home/florian/workspace/easyfridge-api/node_modules/raw-body/index.js:307:7)
+    at emitNone (events.js:86:13)
+    at IncomingMessage.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+2017-02-21T20:41:31.425Z - [32minfo[39m: <<< Response 
+{ id: [32m'a5f695c6-0f5a-4cba-a197-865e53897dd9'[39m,
+  status: [33m400[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'36'[39m,
+     etag: [32m'W/"24-ppV7HLnxMtgr/tblO2Ynng"'[39m } }
+2017-02-21T20:41:31.426Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'a5f695c6-0f5a-4cba-a197-865e53897dd9'[39m,
+  body: { error: [32m'"password" is required'[39m } }
+2017-02-21T20:41:31.431Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:31.437Z - [32minfo[39m: >>> Request 
+{ id: [32m'02fb0379-60d3-4f64-978e-2026c58892fa'[39m,
+  method: [32m'POST'[39m,
+  path: [32m'/user'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:40080'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'content-type'[39m: [32m'application/json'[39m,
+     [32m'content-length'[39m: [32m'107'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.442Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'02fb0379-60d3-4f64-978e-2026c58892fa'[39m,
+  body: 
+   { id: [32m'bmarsh'[39m,
+     email: [32m'beverly@marsh.it'[39m,
+     firstName: [32m'Beverly'[39m,
+     lastName: [32m'Marsh'[39m,
+     password: [32m'qwertyuiop'[39m } }
+2017-02-21T20:41:31.451Z - [31merror[39m:  BAD_REQUEST_ERROR: "password" with value "qwertyuiop" fails to match the password pattern
+    at Joi.validate.err (/home/florian/workspace/easyfridge-api/api/middlewares/validation.js:9:421)
+    at Object._validateWithOptions (/home/florian/workspace/easyfridge-api/node_modules/joi/lib/any.js:610:20)
+    at Object.root.validate (/home/florian/workspace/easyfridge-api/node_modules/joi/lib/index.js:121:23)
+    at validate (/home/florian/workspace/easyfridge-api/api/middlewares/validation.js:9:261)
+    at /home/florian/workspace/easyfridge-api/api/middlewares/validation.js:9:1019
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:176:3)
+    at router (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at app.use (/home/florian/workspace/easyfridge-api/api/index.js:9:1606)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at logRequest (/home/florian/workspace/easyfridge-api/api/middlewares.js:9:622)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at /home/florian/workspace/easyfridge-api/node_modules/body-parser/lib/read.js:129:5
+    at invokeCallback (/home/florian/workspace/easyfridge-api/node_modules/raw-body/index.js:262:16)
+    at done (/home/florian/workspace/easyfridge-api/node_modules/raw-body/index.js:251:7)
+    at IncomingMessage.onEnd (/home/florian/workspace/easyfridge-api/node_modules/raw-body/index.js:307:7)
+    at emitNone (events.js:86:13)
+    at IncomingMessage.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+2017-02-21T20:41:31.453Z - [32minfo[39m: <<< Response 
+{ id: [32m'02fb0379-60d3-4f64-978e-2026c58892fa'[39m,
+  status: [33m400[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'86'[39m,
+     etag: [32m'W/"56-nyA2CtcuQm/8yusQdFwz1g"'[39m } }
+2017-02-21T20:41:31.455Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'02fb0379-60d3-4f64-978e-2026c58892fa'[39m,
+  body: { error: [32m'"password" with value "qwertyuiop" fails to match the password pattern'[39m } }
+2017-02-21T20:41:31.461Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:31.468Z - [32minfo[39m: >>> Request 
+{ id: [32m'f024de4e-50e7-4190-b6a8-f2e4d22019bd'[39m,
+  method: [32m'POST'[39m,
+  path: [32m'/user'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:42931'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'content-type'[39m: [32m'application/json'[39m,
+     [32m'content-length'[39m: [32m'104'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.469Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'f024de4e-50e7-4190-b6a8-f2e4d22019bd'[39m,
+  body: 
+   { id: [32m'bmarsh'[39m,
+     email: [32m'beverlymarsh.it'[39m,
+     firstName: [32m'Beverly'[39m,
+     lastName: [32m'Marsh'[39m,
+     password: [32m'qQ1!qqqq'[39m } }
+2017-02-21T20:41:31.476Z - [31merror[39m:  BAD_REQUEST_ERROR: "email" must be a valid email
+    at Joi.validate.err (/home/florian/workspace/easyfridge-api/api/middlewares/validation.js:9:421)
+    at Object._validateWithOptions (/home/florian/workspace/easyfridge-api/node_modules/joi/lib/any.js:610:20)
+    at Object.root.validate (/home/florian/workspace/easyfridge-api/node_modules/joi/lib/index.js:121:23)
+    at validate (/home/florian/workspace/easyfridge-api/api/middlewares/validation.js:9:261)
+    at /home/florian/workspace/easyfridge-api/api/middlewares/validation.js:9:1019
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:176:3)
+    at router (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at app.use (/home/florian/workspace/easyfridge-api/api/index.js:9:1606)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at logRequest (/home/florian/workspace/easyfridge-api/api/middlewares.js:9:622)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at /home/florian/workspace/easyfridge-api/node_modules/body-parser/lib/read.js:129:5
+    at invokeCallback (/home/florian/workspace/easyfridge-api/node_modules/raw-body/index.js:262:16)
+    at done (/home/florian/workspace/easyfridge-api/node_modules/raw-body/index.js:251:7)
+    at IncomingMessage.onEnd (/home/florian/workspace/easyfridge-api/node_modules/raw-body/index.js:307:7)
+    at emitNone (events.js:86:13)
+    at IncomingMessage.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+2017-02-21T20:41:31.477Z - [32minfo[39m: <<< Response 
+{ id: [32m'f024de4e-50e7-4190-b6a8-f2e4d22019bd'[39m,
+  status: [33m400[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'43'[39m,
+     etag: [32m'W/"2b-5hfYsQCap8OjLC6ZZLK+7g"'[39m } }
+2017-02-21T20:41:31.478Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'f024de4e-50e7-4190-b6a8-f2e4d22019bd'[39m,
+  body: { error: [32m'"email" must be a valid email'[39m } }
+2017-02-21T20:41:31.485Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:31.499Z - [32minfo[39m: >>> Request 
+{ id: [32m'cab15bbd-f666-41d7-9a09-ce65ffe74892'[39m,
+  method: [32m'POST'[39m,
+  path: [32m'/authentication'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:33134'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     [32m'content-type'[39m: [32m'application/json'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'content-length'[39m: [32m'48'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.500Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'cab15bbd-f666-41d7-9a09-ce65ffe74892'[39m,
+  body: { email: [32m'mike@hanlon.it'[39m, password: [32m'p@ssw0rd'[39m } }
+2017-02-21T20:41:31.509Z - [36mverbose[39m: Renewing token for current user
+2017-02-21T20:41:31.510Z - [32minfo[39m: <<< Response 
+{ id: [32m'cab15bbd-f666-41d7-9a09-ce65ffe74892'[39m,
+  status: [33m201[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2VAaGFubG9uLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.ClWxWQx0ZQUqhQq8_qate0hHAfuIwsnqLabgl5Ct1eY'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'204'[39m,
+     etag: [32m'W/"cc-byZ2xUAWLdilMc6OdbRG8A"'[39m } }
+2017-02-21T20:41:31.511Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'cab15bbd-f666-41d7-9a09-ce65ffe74892'[39m,
+  body: { token: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2VAaGFubG9uLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.ClWxWQx0ZQUqhQq8_qate0hHAfuIwsnqLabgl5Ct1eY'[39m } }
+2017-02-21T20:41:31.519Z - [32minfo[39m: >>> Request 
+{ id: [32m'194b5e80-2e17-49f0-84cc-3a4b9613a6cd'[39m,
+  method: [32m'GET'[39m,
+  path: [32m'/user'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:34115'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2VAaGFubG9uLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.ClWxWQx0ZQUqhQq8_qate0hHAfuIwsnqLabgl5Ct1eY'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.521Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'194b5e80-2e17-49f0-84cc-3a4b9613a6cd'[39m, body: {} }
+2017-02-21T20:41:31.531Z - [36mverbose[39m: Authentication is verified on /user for 
+{ email: [32m'mike@hanlon.it'[39m,
+  iat: [33m1487709691[39m,
+  exp: [33m1487724091[39m,
+  iss: [32m'easyfridge-api'[39m }
+2017-02-21T20:41:31.536Z - [36mverbose[39m: Found actual user for 
+{ email: [32m'mike@hanlon.it'[39m,
+  iat: [33m1487709691[39m,
+  exp: [33m1487724091[39m,
+  iss: [32m'easyfridge-api'[39m }
+2017-02-21T20:41:31.550Z - [36mverbose[39m: Renewing token for current user 
+{ _id: [33m73[39m,
+  id: [32m'mhanlon'[39m,
+  email: [32m'mike@hanlon.it'[39m,
+  firstName: [32m'Mike'[39m,
+  lastName: [32m'Hanlon'[39m,
+  password: [32m'p@ssw0rd'[39m,
+  authorizations: [ [32m'role_admin'[39m ],
+  toJSON: [36m[Function][39m,
+  hasAuthorizations: [36m[Function][39m }
+2017-02-21T20:41:31.552Z - [36mverbose[39m: New token is eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2VAaGFubG9uLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.ClWxWQx0ZQUqhQq8_qate0hHAfuIwsnqLabgl5Ct1eY
+2017-02-21T20:41:31.554Z - [32minfo[39m: <<< Response 
+{ id: [32m'194b5e80-2e17-49f0-84cc-3a4b9613a6cd'[39m,
+  status: [33m200[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2VAaGFubG9uLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.ClWxWQx0ZQUqhQq8_qate0hHAfuIwsnqLabgl5Ct1eY'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'224'[39m,
+     etag: [32m'W/"e0-M0YnYNuJPKNtLGJBczmERg"'[39m } }
+2017-02-21T20:41:31.555Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'194b5e80-2e17-49f0-84cc-3a4b9613a6cd'[39m,
+  body: 
+   [ { id: [32m'bdenbrough'[39m,
+       firstName: [32m'Bill'[39m,
+       lastName: [32m'Denbrough'[39m,
+       email: [32m'bill@denbrough.it'[39m,
+       authorizations: [] },
+     { id: [32m'mhanlon'[39m,
+       firstName: [32m'Mike'[39m,
+       lastName: [32m'Hanlon'[39m,
+       email: [32m'mike@hanlon.it'[39m,
+       authorizations: [ [32m'role_admin'[39m ] } ] }
+2017-02-21T20:41:31.564Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:31.610Z - [32minfo[39m: >>> Request 
+{ id: [32m'6649ad13-3c17-41eb-a4e9-c448b0d08213'[39m,
+  method: [32m'POST'[39m,
+  path: [32m'/authentication'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:39242'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     [32m'content-type'[39m: [32m'application/json'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'content-length'[39m: [32m'51'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.612Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'6649ad13-3c17-41eb-a4e9-c448b0d08213'[39m,
+  body: { email: [32m'bill@denbrough.it'[39m, password: [32m'p@ssw0rd'[39m } }
+2017-02-21T20:41:31.617Z - [36mverbose[39m: Renewing token for current user
+2017-02-21T20:41:31.618Z - [32minfo[39m: <<< Response 
+{ id: [32m'6649ad13-3c17-41eb-a4e9-c448b0d08213'[39m,
+  status: [33m201[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.EstUGkBQ5o2e6uojvTnXENJchJgX3u8z-boHnxlzxfc'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'208'[39m,
+     etag: [32m'W/"d0-7+0dVAqVg0sAvHsFw0jVTw"'[39m } }
+2017-02-21T20:41:31.618Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'6649ad13-3c17-41eb-a4e9-c448b0d08213'[39m,
+  body: { token: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.EstUGkBQ5o2e6uojvTnXENJchJgX3u8z-boHnxlzxfc'[39m } }
+2017-02-21T20:41:31.646Z - [32minfo[39m: >>> Request 
+{ id: [32m'9890d30d-5fb2-484e-a1b9-0e9136da8eaa'[39m,
+  method: [32m'GET'[39m,
+  path: [32m'/user'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:45752'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.EstUGkBQ5o2e6uojvTnXENJchJgX3u8z-boHnxlzxfc'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.663Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'9890d30d-5fb2-484e-a1b9-0e9136da8eaa'[39m, body: {} }
+2017-02-21T20:41:31.664Z - [36mverbose[39m: Authentication is verified on /user for 
+{ email: [32m'bill@denbrough.it'[39m,
+  iat: [33m1487709691[39m,
+  exp: [33m1487724091[39m,
+  iss: [32m'easyfridge-api'[39m }
+2017-02-21T20:41:31.667Z - [36mverbose[39m: Found actual user for 
+{ email: [32m'bill@denbrough.it'[39m,
+  iat: [33m1487709691[39m,
+  exp: [33m1487724091[39m,
+  iss: [32m'easyfridge-api'[39m }
+2017-02-21T20:41:31.669Z - [31merror[39m:  FORBIDDEN_ERROR: Forbidden
+    at /home/florian/workspace/easyfridge-api/api/authentication/authentication-service.js:9:4785
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:131:13)
+    at userService.getUserByEmail.then.user (/home/florian/workspace/easyfridge-api/api/authentication/authentication-service.js:9:3606)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-02-21T20:41:31.675Z - [32minfo[39m: <<< Response 
+{ id: [32m'9890d30d-5fb2-484e-a1b9-0e9136da8eaa'[39m,
+  status: [33m403[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'21'[39m,
+     etag: [32m'W/"15-BOD3e569EKnzuMK5eYTqnA"'[39m } }
+2017-02-21T20:41:31.677Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'9890d30d-5fb2-484e-a1b9-0e9136da8eaa'[39m,
+  body: { error: [32m'Forbidden'[39m } }
+2017-02-21T20:41:31.683Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:31.694Z - [32minfo[39m: >>> Request 
+{ id: [32m'50270337-610f-45e3-979f-75b0c2b35baf'[39m,
+  method: [32m'GET'[39m,
+  path: [32m'/user'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:45867'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'x-auth-token'[39m: [32m'xxx.yyy.zzz'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.696Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'50270337-610f-45e3-979f-75b0c2b35baf'[39m, body: {} }
+2017-02-21T20:41:31.702Z - [33mwarn[39m: Invalid token"xxx.yyy.zzz".
+2017-02-21T20:41:31.705Z - [31merror[39m:  AUTHENTICATION_ERROR: Wrong authentication
+    at /home/florian/workspace/easyfridge-api/api/authentication/authentication-service.js:9:3720
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:176:3)
+    at router (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at app.use (/home/florian/workspace/easyfridge-api/api/index.js:9:1606)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at logRequest (/home/florian/workspace/easyfridge-api/api/middlewares.js:9:622)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at jsonParser (/home/florian/workspace/easyfridge-api/node_modules/body-parser/lib/types/json.js:103:7)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at expressInit (/home/florian/workspace/easyfridge-api/node_modules/express/lib/middleware/init.js:33:5)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at query (/home/florian/workspace/easyfridge-api/node_modules/express/lib/middleware/query.js:44:5)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:176:3)
+    at Function.handle (/home/florian/workspace/easyfridge-api/node_modules/express/lib/application.js:173:10)
+    at Server.app (/home/florian/workspace/easyfridge-api/node_modules/express/lib/express.js:38:9)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:547:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:99:23)
+2017-02-21T20:41:31.706Z - [32minfo[39m: <<< Response 
+{ id: [32m'50270337-610f-45e3-979f-75b0c2b35baf'[39m,
+  status: [33m401[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'32'[39m,
+     etag: [32m'W/"20-Iaw0S52tZROG13+/9JWnMg"'[39m } }
+2017-02-21T20:41:31.707Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'50270337-610f-45e3-979f-75b0c2b35baf'[39m,
+  body: { error: [32m'Wrong authentication'[39m } }
+2017-02-21T20:41:31.735Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:31.754Z - [32minfo[39m: >>> Request 
+{ id: [32m'f04c7554-6657-451f-a703-46668494a901'[39m,
+  method: [32m'POST'[39m,
+  path: [32m'/authentication'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:42291'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     [32m'content-type'[39m: [32m'application/json'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'content-length'[39m: [32m'51'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.757Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'f04c7554-6657-451f-a703-46668494a901'[39m,
+  body: { email: [32m'bill@denbrough.it'[39m, password: [32m'p@ssw0rd'[39m } }
+2017-02-21T20:41:31.764Z - [36mverbose[39m: Renewing token for current user
+2017-02-21T20:41:31.768Z - [32minfo[39m: <<< Response 
+{ id: [32m'f04c7554-6657-451f-a703-46668494a901'[39m,
+  status: [33m201[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.EstUGkBQ5o2e6uojvTnXENJchJgX3u8z-boHnxlzxfc'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'208'[39m,
+     etag: [32m'W/"d0-7+0dVAqVg0sAvHsFw0jVTw"'[39m } }
+2017-02-21T20:41:31.769Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'f04c7554-6657-451f-a703-46668494a901'[39m,
+  body: { token: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.EstUGkBQ5o2e6uojvTnXENJchJgX3u8z-boHnxlzxfc'[39m } }
+2017-02-21T20:41:31.781Z - [32minfo[39m: >>> Request 
+{ id: [32m'f70c51c9-3f93-4fce-9fd6-6e27a6f73bf1'[39m,
+  method: [32m'GET'[39m,
+  path: [32m'/user/bdenbrough'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:44063'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.EstUGkBQ5o2e6uojvTnXENJchJgX3u8z-boHnxlzxfc'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.782Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'f70c51c9-3f93-4fce-9fd6-6e27a6f73bf1'[39m, body: {} }
+2017-02-21T20:41:31.785Z - [36mverbose[39m: Authentication is verified on /user/bdenbrough for 
+{ email: [32m'bill@denbrough.it'[39m,
+  iat: [33m1487709691[39m,
+  exp: [33m1487724091[39m,
+  iss: [32m'easyfridge-api'[39m }
+2017-02-21T20:41:31.790Z - [36mverbose[39m: Found actual user for 
+{ email: [32m'bill@denbrough.it'[39m,
+  iat: [33m1487709691[39m,
+  exp: [33m1487724091[39m,
+  iss: [32m'easyfridge-api'[39m }
+2017-02-21T20:41:31.795Z - [36mverbose[39m: Renewing token for current user 
+{ _id: [33m42[39m,
+  id: [32m'bdenbrough'[39m,
+  email: [32m'bill@denbrough.it'[39m,
+  firstName: [32m'Bill'[39m,
+  lastName: [32m'Denbrough'[39m,
+  password: [32m'p@ssw0rd'[39m,
+  authorizations: [],
+  toJSON: [36m[Function][39m,
+  hasAuthorizations: [36m[Function][39m }
+2017-02-21T20:41:31.802Z - [36mverbose[39m: New token is eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.EstUGkBQ5o2e6uojvTnXENJchJgX3u8z-boHnxlzxfc
+2017-02-21T20:41:31.808Z - [32minfo[39m: <<< Response 
+{ id: [32m'f70c51c9-3f93-4fce-9fd6-6e27a6f73bf1'[39m,
+  status: [33m200[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.EstUGkBQ5o2e6uojvTnXENJchJgX3u8z-boHnxlzxfc'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'109'[39m,
+     etag: [32m'W/"6d-MOxlmzrDoZnU6f5Uc2OR1Q"'[39m } }
+2017-02-21T20:41:31.810Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'f70c51c9-3f93-4fce-9fd6-6e27a6f73bf1'[39m,
+  body: 
+   { id: [32m'bdenbrough'[39m,
+     firstName: [32m'Bill'[39m,
+     lastName: [32m'Denbrough'[39m,
+     email: [32m'bill@denbrough.it'[39m,
+     authorizations: [] } }
+2017-02-21T20:41:31.824Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:31.832Z - [32minfo[39m: >>> Request 
+{ id: [32m'b4a9b30e-ba7c-4aa2-8029-c7efac3e392b'[39m,
+  method: [32m'POST'[39m,
+  path: [32m'/authentication'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:40148'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     [32m'content-type'[39m: [32m'application/json'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'content-length'[39m: [32m'48'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.836Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'b4a9b30e-ba7c-4aa2-8029-c7efac3e392b'[39m,
+  body: { email: [32m'mike@hanlon.it'[39m, password: [32m'p@ssw0rd'[39m } }
+2017-02-21T20:41:31.841Z - [36mverbose[39m: Renewing token for current user
+2017-02-21T20:41:31.842Z - [32minfo[39m: <<< Response 
+{ id: [32m'b4a9b30e-ba7c-4aa2-8029-c7efac3e392b'[39m,
+  status: [33m201[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2VAaGFubG9uLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.ClWxWQx0ZQUqhQq8_qate0hHAfuIwsnqLabgl5Ct1eY'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'204'[39m,
+     etag: [32m'W/"cc-byZ2xUAWLdilMc6OdbRG8A"'[39m } }
+2017-02-21T20:41:31.843Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'b4a9b30e-ba7c-4aa2-8029-c7efac3e392b'[39m,
+  body: { token: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2VAaGFubG9uLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.ClWxWQx0ZQUqhQq8_qate0hHAfuIwsnqLabgl5Ct1eY'[39m } }
+2017-02-21T20:41:31.847Z - [32minfo[39m: >>> Request 
+{ id: [32m'6ff13347-554c-4d89-8327-11793fbdcfb3'[39m,
+  method: [32m'GET'[39m,
+  path: [32m'/user/bdenbrough'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:41770'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2VAaGFubG9uLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.ClWxWQx0ZQUqhQq8_qate0hHAfuIwsnqLabgl5Ct1eY'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.855Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'6ff13347-554c-4d89-8327-11793fbdcfb3'[39m, body: {} }
+2017-02-21T20:41:31.857Z - [36mverbose[39m: Authentication is verified on /user/bdenbrough for 
+{ email: [32m'mike@hanlon.it'[39m,
+  iat: [33m1487709691[39m,
+  exp: [33m1487724091[39m,
+  iss: [32m'easyfridge-api'[39m }
+2017-02-21T20:41:31.865Z - [36mverbose[39m: Found actual user for 
+{ email: [32m'mike@hanlon.it'[39m,
+  iat: [33m1487709691[39m,
+  exp: [33m1487724091[39m,
+  iss: [32m'easyfridge-api'[39m }
+2017-02-21T20:41:31.882Z - [36mverbose[39m: Renewing token for current user 
+{ _id: [33m73[39m,
+  id: [32m'mhanlon'[39m,
+  email: [32m'mike@hanlon.it'[39m,
+  firstName: [32m'Mike'[39m,
+  lastName: [32m'Hanlon'[39m,
+  password: [32m'p@ssw0rd'[39m,
+  authorizations: [ [32m'role_admin'[39m ],
+  toJSON: [36m[Function][39m,
+  hasAuthorizations: [36m[Function][39m }
+2017-02-21T20:41:31.884Z - [36mverbose[39m: New token is eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2VAaGFubG9uLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.ClWxWQx0ZQUqhQq8_qate0hHAfuIwsnqLabgl5Ct1eY
+2017-02-21T20:41:31.885Z - [32minfo[39m: <<< Response 
+{ id: [32m'6ff13347-554c-4d89-8327-11793fbdcfb3'[39m,
+  status: [33m200[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2VAaGFubG9uLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.ClWxWQx0ZQUqhQq8_qate0hHAfuIwsnqLabgl5Ct1eY'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'109'[39m,
+     etag: [32m'W/"6d-MOxlmzrDoZnU6f5Uc2OR1Q"'[39m } }
+2017-02-21T20:41:31.886Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'6ff13347-554c-4d89-8327-11793fbdcfb3'[39m,
+  body: 
+   { id: [32m'bdenbrough'[39m,
+     firstName: [32m'Bill'[39m,
+     lastName: [32m'Denbrough'[39m,
+     email: [32m'bill@denbrough.it'[39m,
+     authorizations: [] } }
+2017-02-21T20:41:31.893Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:31.904Z - [32minfo[39m: >>> Request 
+{ id: [32m'b818753a-ca1a-4acd-93f3-60bb16750bee'[39m,
+  method: [32m'POST'[39m,
+  path: [32m'/authentication'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:43388'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     [32m'content-type'[39m: [32m'application/json'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'content-length'[39m: [32m'48'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.907Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'b818753a-ca1a-4acd-93f3-60bb16750bee'[39m,
+  body: { email: [32m'mike@hanlon.it'[39m, password: [32m'p@ssw0rd'[39m } }
+2017-02-21T20:41:31.912Z - [36mverbose[39m: Renewing token for current user
+2017-02-21T20:41:31.913Z - [32minfo[39m: <<< Response 
+{ id: [32m'b818753a-ca1a-4acd-93f3-60bb16750bee'[39m,
+  status: [33m201[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2VAaGFubG9uLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.ClWxWQx0ZQUqhQq8_qate0hHAfuIwsnqLabgl5Ct1eY'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'204'[39m,
+     etag: [32m'W/"cc-byZ2xUAWLdilMc6OdbRG8A"'[39m } }
+2017-02-21T20:41:31.915Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'b818753a-ca1a-4acd-93f3-60bb16750bee'[39m,
+  body: { token: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2VAaGFubG9uLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.ClWxWQx0ZQUqhQq8_qate0hHAfuIwsnqLabgl5Ct1eY'[39m } }
+2017-02-21T20:41:31.926Z - [32minfo[39m: >>> Request 
+{ id: [32m'28b583bc-ef8c-4600-9336-816e0b877097'[39m,
+  method: [32m'GET'[39m,
+  path: [32m'/user/dduck'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:33364'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2VAaGFubG9uLml0IiwiaWF0IjoxNDg3NzA5NjkxLCJleHAiOjE0ODc3MjQwOTEsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.ClWxWQx0ZQUqhQq8_qate0hHAfuIwsnqLabgl5Ct1eY'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.926Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'28b583bc-ef8c-4600-9336-816e0b877097'[39m, body: {} }
+2017-02-21T20:41:31.934Z - [36mverbose[39m: Authentication is verified on /user/dduck for 
+{ email: [32m'mike@hanlon.it'[39m,
+  iat: [33m1487709691[39m,
+  exp: [33m1487724091[39m,
+  iss: [32m'easyfridge-api'[39m }
+2017-02-21T20:41:31.965Z - [36mverbose[39m: Found actual user for 
+{ email: [32m'mike@hanlon.it'[39m,
+  iat: [33m1487709691[39m,
+  exp: [33m1487724091[39m,
+  iss: [32m'easyfridge-api'[39m }
+2017-02-21T20:41:31.973Z - [31merror[39m:  NOT_FOUND_ERROR: Not found
+    at router.post.get.get.use (/home/florian/workspace/easyfridge-api/api/user/user-router.js:9:2511)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:121:14)
+    at service.getUser.then.body (/home/florian/workspace/easyfridge-api/api/user/user-router.js:9:2223)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-02-21T20:41:31.975Z - [32minfo[39m: <<< Response 
+{ id: [32m'28b583bc-ef8c-4600-9336-816e0b877097'[39m,
+  status: [33m404[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'21'[39m,
+     etag: [32m'W/"15-Lvrg4Gz9w+rMdDVG/1lddA"'[39m } }
+2017-02-21T20:41:31.976Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'28b583bc-ef8c-4600-9336-816e0b877097'[39m,
+  body: { error: [32m'Not found'[39m } }
+2017-02-21T20:41:31.981Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:31.992Z - [32minfo[39m: >>> Request 
+{ id: [32m'5e736914-2262-48dd-8020-5484b2051d89'[39m,
+  method: [32m'GET'[39m,
+  path: [32m'/user/bdenbrough'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:39771'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     accept: [32m'application/json'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:31.994Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'5e736914-2262-48dd-8020-5484b2051d89'[39m, body: {} }
+2017-02-21T20:41:31.996Z - [33mwarn[39m: Invalid token"undefined".
+2017-02-21T20:41:31.997Z - [31merror[39m:  AUTHENTICATION_ERROR: Wrong authentication
+    at /home/florian/workspace/easyfridge-api/api/authentication/authentication-service.js:9:3720
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:277:22
+    at param (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:349:14)
+    at param (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:176:3)
+    at router (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at app.use (/home/florian/workspace/easyfridge-api/api/index.js:9:1606)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at logRequest (/home/florian/workspace/easyfridge-api/api/middlewares.js:9:622)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at jsonParser (/home/florian/workspace/easyfridge-api/node_modules/body-parser/lib/types/json.js:103:7)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at expressInit (/home/florian/workspace/easyfridge-api/node_modules/express/lib/middleware/init.js:33:5)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at query (/home/florian/workspace/easyfridge-api/node_modules/express/lib/middleware/query.js:44:5)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:176:3)
+    at Function.handle (/home/florian/workspace/easyfridge-api/node_modules/express/lib/application.js:173:10)
+    at Server.app (/home/florian/workspace/easyfridge-api/node_modules/express/lib/express.js:38:9)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:547:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:99:23)
+2017-02-21T20:41:31.998Z - [32minfo[39m: <<< Response 
+{ id: [32m'5e736914-2262-48dd-8020-5484b2051d89'[39m,
+  status: [33m401[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'32'[39m,
+     etag: [32m'W/"20-Iaw0S52tZROG13+/9JWnMg"'[39m } }
+2017-02-21T20:41:31.999Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'5e736914-2262-48dd-8020-5484b2051d89'[39m,
+  body: { error: [32m'Wrong authentication'[39m } }
+2017-02-21T20:41:32.014Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:32.022Z - [32minfo[39m: >>> Request 
+{ id: [32m'a981e1be-3051-4cba-ba61-6502fb846f14'[39m,
+  method: [32m'POST'[39m,
+  path: [32m'/authentication'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:34276'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     [32m'content-type'[39m: [32m'application/json'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'content-length'[39m: [32m'51'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:32.027Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'a981e1be-3051-4cba-ba61-6502fb846f14'[39m,
+  body: { email: [32m'bill@denbrough.it'[39m, password: [32m'p@ssw0rd'[39m } }
+2017-02-21T20:41:32.032Z - [36mverbose[39m: Renewing token for current user
+2017-02-21T20:41:32.033Z - [32minfo[39m: <<< Response 
+{ id: [32m'a981e1be-3051-4cba-ba61-6502fb846f14'[39m,
+  status: [33m201[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkyLCJleHAiOjE0ODc3MjQwOTIsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.mdu8PYa20FiQTaTZTKCmWMbqAhI3ZPJEMVX_BZCi-H8'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'208'[39m,
+     etag: [32m'W/"d0-dI6nyLe9NIdnzX1A8OkIow"'[39m } }
+2017-02-21T20:41:32.034Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'a981e1be-3051-4cba-ba61-6502fb846f14'[39m,
+  body: { token: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkyLCJleHAiOjE0ODc3MjQwOTIsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.mdu8PYa20FiQTaTZTKCmWMbqAhI3ZPJEMVX_BZCi-H8'[39m } }
+2017-02-21T20:41:32.040Z - [32minfo[39m: >>> Request 
+{ id: [32m'5b234751-4800-488b-a8a4-413b2bb5ef14'[39m,
+  method: [32m'GET'[39m,
+  path: [32m'/user/ekaspbrak'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:41688'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkyLCJleHAiOjE0ODc3MjQwOTIsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.mdu8PYa20FiQTaTZTKCmWMbqAhI3ZPJEMVX_BZCi-H8'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:32.050Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'5b234751-4800-488b-a8a4-413b2bb5ef14'[39m, body: {} }
+2017-02-21T20:41:32.051Z - [36mverbose[39m: Authentication is verified on /user/ekaspbrak for 
+{ email: [32m'bill@denbrough.it'[39m,
+  iat: [33m1487709692[39m,
+  exp: [33m1487724092[39m,
+  iss: [32m'easyfridge-api'[39m }
+2017-02-21T20:41:32.059Z - [36mverbose[39m: Found actual user for 
+{ email: [32m'bill@denbrough.it'[39m,
+  iat: [33m1487709692[39m,
+  exp: [33m1487724092[39m,
+  iss: [32m'easyfridge-api'[39m }
+2017-02-21T20:41:32.061Z - [31merror[39m:  FORBIDDEN_ERROR: Forbidden
+    at /home/florian/workspace/easyfridge-api/api/authentication/authentication-service.js:9:4785
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:131:13)
+    at userService.getUserByEmail.then.user (/home/florian/workspace/easyfridge-api/api/authentication/authentication-service.js:9:3606)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-02-21T20:41:32.062Z - [32minfo[39m: <<< Response 
+{ id: [32m'5b234751-4800-488b-a8a4-413b2bb5ef14'[39m,
+  status: [33m403[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'21'[39m,
+     etag: [32m'W/"15-BOD3e569EKnzuMK5eYTqnA"'[39m } }
+2017-02-21T20:41:32.063Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'5b234751-4800-488b-a8a4-413b2bb5ef14'[39m,
+  body: { error: [32m'Forbidden'[39m } }
+2017-02-21T20:41:32.067Z - [36mverbose[39m: Dropped test database
+2017-02-21T20:41:32.092Z - [32minfo[39m: >>> Request 
+{ id: [32m'b77d0e64-971d-4494-b48e-40c4abca0638'[39m,
+  method: [32m'POST'[39m,
+  path: [32m'/authentication'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:33485'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     [32m'content-type'[39m: [32m'application/json'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'content-length'[39m: [32m'51'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:32.092Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'b77d0e64-971d-4494-b48e-40c4abca0638'[39m,
+  body: { email: [32m'bill@denbrough.it'[39m, password: [32m'p@ssw0rd'[39m } }
+2017-02-21T20:41:32.129Z - [36mverbose[39m: Renewing token for current user
+2017-02-21T20:41:32.132Z - [32minfo[39m: <<< Response 
+{ id: [32m'b77d0e64-971d-4494-b48e-40c4abca0638'[39m,
+  status: [33m201[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkyLCJleHAiOjE0ODc3MjQwOTIsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.mdu8PYa20FiQTaTZTKCmWMbqAhI3ZPJEMVX_BZCi-H8'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'208'[39m,
+     etag: [32m'W/"d0-dI6nyLe9NIdnzX1A8OkIow"'[39m } }
+2017-02-21T20:41:32.132Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'b77d0e64-971d-4494-b48e-40c4abca0638'[39m,
+  body: { token: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkyLCJleHAiOjE0ODc3MjQwOTIsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.mdu8PYa20FiQTaTZTKCmWMbqAhI3ZPJEMVX_BZCi-H8'[39m } }
+2017-02-21T20:41:32.165Z - [32minfo[39m: >>> Request 
+{ id: [32m'02ee440d-3f5d-418c-8408-a4d128ea25c4'[39m,
+  method: [32m'GET'[39m,
+  path: [32m'/user/bdenbrough'[39m,
+  query: {},
+  headers: 
+   { host: [32m'127.0.0.1:41006'[39m,
+     [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+     [32m'user-agent'[39m: [32m'node-superagent/2.3.0'[39m,
+     accept: [32m'application/json'[39m,
+     [32m'x-auth-token'[39m: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpbGxAZGVuYnJvdWdoLml0IiwiaWF0IjoxNDg3NzA5NjkyLCJleHAiOjE0ODc3MjQwOTIsImlzcyI6ImVhc3lmcmlkZ2UtYXBpIn0.mdu8PYa20FiQTaTZTKCmWMbqAhI3ZPJEMVX_BZCi-H8'[39m,
+     connection: [32m'close'[39m } }
+2017-02-21T20:41:32.171Z - [36mverbose[39m: >>> Request Body 
+{ id: [32m'02ee440d-3f5d-418c-8408-a4d128ea25c4'[39m, body: {} }
+2017-02-21T20:41:32.171Z - [36mverbose[39m: Authentication is verified on /user/bdenbrough for 
+{ email: [32m'bill@denbrough.it'[39m,
+  iat: [33m1487709692[39m,
+  exp: [33m1487724092[39m,
+  iss: [32m'easyfridge-api'[39m }
+2017-02-21T20:41:32.180Z - [31merror[39m:  TypeError: collection.findOne is not a function
+    at Object.email [as findUserByEmail] (/home/florian/workspace/easyfridge-api/api/user/user-repository.js:9:1954)
+    at Object.email [as getUserByEmail] (/home/florian/workspace/easyfridge-api/api/user/user-service.js:9:446)
+    at /home/florian/workspace/easyfridge-api/api/authentication/authentication-service.js:9:2465
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:277:22
+    at param (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:349:14)
+    at param (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:176:3)
+    at router (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at app.use (/home/florian/workspace/easyfridge-api/api/index.js:9:1606)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at logRequest (/home/florian/workspace/easyfridge-api/api/middlewares.js:9:622)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at jsonParser (/home/florian/workspace/easyfridge-api/node_modules/body-parser/lib/types/json.js:103:7)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at expressInit (/home/florian/workspace/easyfridge-api/node_modules/express/lib/middleware/init.js:33:5)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at query (/home/florian/workspace/easyfridge-api/node_modules/express/lib/middleware/query.js:44:5)
+    at Layer.handle [as handle_request] (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:312:13)
+    at /home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/home/florian/workspace/easyfridge-api/node_modules/express/lib/router/index.js:176:3)
+    at Function.handle (/home/florian/workspace/easyfridge-api/node_modules/express/lib/application.js:173:10)
+    at Server.app (/home/florian/workspace/easyfridge-api/node_modules/express/lib/express.js:38:9)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:547:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:99:23)
+2017-02-21T20:41:32.182Z - [32minfo[39m: <<< Response 
+{ id: [32m'02ee440d-3f5d-418c-8408-a4d128ea25c4'[39m,
+  status: [33m500[39m,
+  headers: 
+   { [32m'x-powered-by'[39m: [32m'Express'[39m,
+     [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+     [32m'content-length'[39m: [32m'48'[39m,
+     etag: [32m'W/"30-x1YLGu0ECtjEGl00pU8yNg"'[39m } }
+2017-02-21T20:41:32.182Z - [36mverbose[39m: <<< Response Body 
+{ id: [32m'02ee440d-3f5d-418c-8408-a4d128ea25c4'[39m,
+  body: { error: [32m'collection.findOne is not a function'[39m } }
+2017-02-21T20:41:32.229Z - [32minfo[39m: Easyfridge api stopped ...
