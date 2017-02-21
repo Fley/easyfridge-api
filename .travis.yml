@@ -4,7 +4,5 @@ node_js:
   - "node"
 addons:
   sonarqube:
-    token:
-      secure: SONAR_TOKEN
 script:
   - sonar-scanner

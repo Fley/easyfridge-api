@@ -1,4 +1,5 @@
 # Easyfridge API
+[![Build Status](https://travis-ci.org/Fley/easyfridge-api.svg?branch=master)](https://travis-ci.org/Fley/easyfridge-api)
 
 ## Endpoints
 
