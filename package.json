@@ -4,10 +4,10 @@
   "description": "Easyfridge API",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
-    "test": "find api -wholename '*/test/*.js' | xargs istanbul cover --dir reports/coverage _mocha -- --reporter mochawesome --reporter-options reportDir=reports/mochawesome; sonar-scanner;",
+    "start": "mkdir logs;nodemon",
+    "test": "mkdir logs;find api -wholename '*/test/*.js' | xargs istanbul cover --dir reports/coverage _mocha -- --reporter mochawesome --reporter-options reportDir=reports/mochawesome; sonar-scanner;",
     "show-reports": "firefox reports/coverage/lcov-report/index.html --new-tab --url  reports/mochawesome/mochawesome.html --new-tab --url https://sonarqube.com/dashboard/index?id=fley%3Aeasyfridge-api &",
-    "start-test": "find api -wholename '*/test/*.js' | xargs mocha -w"
+    "start-test": "mkdir logs;find api -wholename '*/test/*.js' | xargs mocha -w"
   },
   "author": "Florian Eysseric",
   "license": "ISC",
