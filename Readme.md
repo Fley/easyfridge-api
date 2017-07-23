@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/Fley/easyfridge-api.svg?branch=master)](https://travis-ci.org/Fley/easyfridge-api)
 [![Coverage Status](https://coveralls.io/repos/github/Fley/easyfridge-api/badge.svg?branch=master)](https://coveralls.io/github/Fley/easyfridge-api?branch=master)
 
+
 ## Endpoints
 
 ### Authentication
@@ -33,6 +34,14 @@
 - **Authorizations**: Admin or User with `id`
 
 ### Fridge
+- **Authorizations**: Admin or User
+```json
+{
+  "id": 42,
+  "name": "Derry",
+  "items": [ ...items ]
+}
+```
 
 #### POST `/fridge`
 #### GET `/fridge`
@@ -46,6 +55,16 @@
 #### DELETE `/fridge/:id/item/:id`
 
 ### Item
+- **Authorizations**: Admin or User
+```json
+{
+  "id": 42,
+  "name": "Bird",
+  "perishableDate": 1234567890,
+  "quantity": 4,
+  
+}
+```
 
 #### GET `/item/:id`
 #### PATCH `/item/:id`
